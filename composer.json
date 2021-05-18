@@ -8,7 +8,7 @@
             "email": "eissaweb@gmail.com"
         }
     ],
-    "autolad": {
+    "autoload": {
     	"psr-4": {"PHPHtmlTextContent\\": "src/"}
     },
     "require": {
