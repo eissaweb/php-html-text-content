@@ -8,7 +8,7 @@ class ReplaceTextContent
 {
 	public static function replace($str, $search, $replace, $callback = null)
 	{
-		return (new static::class)->replaceContent($str, $search, $replace, $callback);
+		return (new static)->replaceContent($str, $search, $replace, $callback);
 	}
 	public function replaceContent($str, $search, $replace, $callback = null)
 	{
@@ -33,7 +33,7 @@ class ReplaceTextContent
         }
         if (get_class($elem) == 'PHPHtmlParser\Dom\Node\TextNode') {
             $elem->setText(
-                $this->changeTextContent($elem->text, $callback)
+                $this->changeTextContent($elem->text, $search, $replace, $callback)
             );
         }
     }
