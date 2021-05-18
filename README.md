@@ -13,12 +13,13 @@ require_once 'vendor/autoload.php';
 
 use PHPHtmlTextContent\ReplaceTextContent;
 
-$str = '<div>Hello World!!2</div>';
+$str = '<div>Hello World!!2</div></p>New Line 2</p>';
 // ReplaceTextContent::replace($str, $search, $replace, $callback = null);
 $replaced = ReplaceTextContent::replace($str, '2', '');
 
 echo $replaced;
-// Hello World!!
+//Hello World!!
+// New Line
 ```
 
 ## #2 using array of string as a parameter
@@ -46,7 +47,7 @@ require_once 'vendor/autoload.php';
 
 use PHPHtmlTextContent\ReplaceTextContent;
 
-$str = '<div>Hello World??2</div>';
+$str = '<div>Hello World??2</div><div class="username"><a href="github.com/eissaweb">Eissaweb??</a></div>';
 // ReplaceTextContent::replace($str, $search, $replace, $callback = null);
 $replaced = ReplaceTextContent::replace($str, ['2', '?'], ['', '!'], function ($replacedStr) {
     // in this case you can style the replaced text by using inline style or adding html classes to the tag as you want.
@@ -55,4 +56,5 @@ $replaced = ReplaceTextContent::replace($str, ['2', '?'], ['', '!'], function ($
 
 echo $replaced;
 // Hello World!!
+// Eissaweb!!
 ```
