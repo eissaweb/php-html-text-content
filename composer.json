@@ -9,7 +9,7 @@
         }
     ],
     "autolad": {
-    	"psr-4": {"Eissaweb\\PHPHtmlTextContent\\": "src/"}
+    	"psr-4": {"PHPHtmlTextContent\\": "src/"}
     },
     "require": {
         "paquettg/php-html-parser": "^3.1"

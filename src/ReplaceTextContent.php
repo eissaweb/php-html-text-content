@@ -1,6 +1,6 @@
 <?php 
 
-namespace Eissaweb\PHPHtmlTextContent;
+namespace PHPHtmlTextContent;
 
 use PHPHtmlParser\Dom;
 
